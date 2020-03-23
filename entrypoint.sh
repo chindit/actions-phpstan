@@ -22,4 +22,6 @@ fi
 echo "## Running PHPStan with arguments «${ARGUMENTS}»"
 echo "PHP Version : ${PHP_FULL_VERSION}"
 
+echo "php -d memory_limit=-1 /phpstan ${ARGUMENTS}"
+/phpstan -V
 php -d memory_limit=-1 /phpstan "${ARGUMENTS}"
