@@ -14,6 +14,13 @@ if [ -z "$(ls)" ]; then
   exit 1
 fi
 
+if [ ! -d vendor/ ] || [ ! -f vendor/autoload.php ]; then
+  echo "WARNING!!!: No autoload detected.  You may get errors from PHPStan due to missing autoload";
+  echo "Consider adding this snippet:
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest"
+fi
+
 if [[ ! "$ARGUMENTS" =~ ^analyse* ]]; then
   echo "INFO: no mode have been detected.  Setting mode to «analyse»"
   ARGUMENTS="analyse ${ARGUMENTS}"

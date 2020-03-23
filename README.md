@@ -37,6 +37,14 @@ jobs:
 **TIP**: You can replace `@master` by `@1.0.0` or any specific version of this
 package you'd like to use.
 
+### Autoloader
+If your dependencies are not installed, you may get errors from PHPStan.
+Just add these lines **before** calling `chindit/phpstan`:
+```yaml
+- name: Install dependencies
+  run: composer install --prefer-dist --no-progress --no-suggest
+```
+
 ### Arguments
 By default, `phpstan` is ran with current directory in analyse mode.
 
