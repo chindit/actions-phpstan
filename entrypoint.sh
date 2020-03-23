@@ -19,9 +19,8 @@ if [[ ! "$ARGUMENTS" =~ ^analyse* ]]; then
   ARGUMENTS="analyse ${ARGUMENTS}"
 fi
 
+/phpstan -V
 echo "## Running PHPStan with arguments «${ARGUMENTS}»"
 echo "PHP Version : ${PHP_FULL_VERSION}"
 
-echo "php -d memory_limit=-1 /phpstan ${ARGUMENTS}"
-/phpstan -V
-php -d memory_limit=-1 /phpstan "${ARGUMENTS}"
+php -d memory_limit=-1 /phpstan ${ARGUMENTS}
