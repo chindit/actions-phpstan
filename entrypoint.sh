@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 PHP_FULL_VERSION=$(php -r 'echo phpversion();')
@@ -14,7 +14,6 @@ if [ -z "$(ls)" ]; then
   exit 1
 fi
 
-# shellcheck disable=SC2039
 if [[ ! "$ARGUMENTS" =~ ^analyse* ]]; then
   echo "INFO: no mode have been detected.  Setting mode to «analyse»"
   ARGUMENTS="analyse ${ARGUMENTS}"
