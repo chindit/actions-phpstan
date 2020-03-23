@@ -1,0 +1,16 @@
+name: 'PHP STatic ANalyser (phpstan)'
+description: 'PHPSTAN run'
+author: 'David Lumaye (chindit)'
+branding:
+    icon: 'zap'
+    color: 'green'
+inputs:
+    arguments:
+        description: 'Arguments to add to PHPStan CLI'
+        required: false
+        default: ''
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{ inputs.dir }}
