@@ -26,6 +26,11 @@ if [[ ! "$ARGUMENTS" =~ ^analyse* ]]; then
   ARGUMENTS="analyse ${ARGUMENTS}"
 fi
 
+if [ -f phpstan.neon ]; then
+  echo "INFO: configuration file was found.  Using it"
+  ARGUMENTS="${ARGUMENTS} -c phpstan.neon"
+fi
+
 /phpstan -V
 echo "## Running PHPStan with arguments «${ARGUMENTS}»"
 echo "PHP Version : ${PHP_FULL_VERSION}"

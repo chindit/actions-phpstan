@@ -64,3 +64,7 @@ but you **must** respect PHPStan's CLI order and you **must** specify working
 directory if you want to use other arguments such as `--level`.
 
 For example, `arguments: '--level=7'` won't work, but `arguments: '. --level=7'` will.
+
+### Configuration file
+If a configuration file named `phpstan.neon` is found at the root directory of
+your code, it will be automatically used for analyse.
