@@ -28,7 +28,7 @@ fi
 
 if [ -f phpstan.neon ]; then
   echo "INFO: configuration file was found.  Using it"
-  ARGUMENTS="analyse -c phpstan.neon"
+  ARGUMENTS="${ARGUMENTS} -c phpstan.neon"
 fi
 
 /phpstan -V
