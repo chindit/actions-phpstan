@@ -4,7 +4,7 @@ set -e
 PHP_FULL_VERSION=$(php -r 'echo phpversion();')
 
 if [ -z "$1" ]; then
-  ARGUMENTS="analyse ."
+  ARGUMENTS="analyse src"
 else
   ARGUMENTS="$1"
 fi
