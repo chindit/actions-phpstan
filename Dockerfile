@@ -5,7 +5,7 @@ LABEL repository="https://github.com/chindit/actions-phpstan"
 LABEL homepage="https://github.com/chindit/actions-phpstan"
 LABEL maintainer="David Lumaye <littletiger58@gmail.com>"
 
-RUN curl -L https://github.com/phpstan/phpstan/releases/download/latest/phpstan.phar -o /phpstan
+RUN curl -L https://github.com/phpstan/phpstan/releases/latest/download/phpstan.phar -o /phpstan
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 
