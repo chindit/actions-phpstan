@@ -1,6 +1,5 @@
 # actions-phpstan
-PHPStan action for GitHub on PHP 7.4
-
+PHPStan action for GitHub on PHP 8.3
 ## Setup
 Add these lines to your YAML config file
 ```yaml
@@ -42,7 +41,7 @@ If your dependencies are not installed, you may get errors from PHPStan.
 Just add these lines **before** calling `chindit/phpstan`:
 ```yaml
 - name: Install dependencies
-  run: composer install --prefer-dist --no-progress --no-suggest
+  run: composer install --prefer-dist --no-progress
 ```
 
 ### Arguments
