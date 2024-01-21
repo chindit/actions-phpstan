@@ -18,7 +18,7 @@ if [ ! -d vendor/ ] || [ ! -f vendor/autoload.php ]; then
   echo "WARNING!!!: No autoload detected.  You may get errors from PHPStan due to missing autoload";
   echo "Consider adding this snippet:
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest"
+        run: composer install --prefer-dist --no-progress"
 fi
 
 if [[ ! "$ARGUMENTS" =~ ^analyse* ]]; then
