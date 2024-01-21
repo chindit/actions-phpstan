@@ -1,4 +1,4 @@
-FROM php:8.1-cli
+FROM php:8.3-cli
 
 LABEL version="1.0"
 LABEL repository="https://github.com/chindit/actions-phpstan"
